@@ -17,15 +17,25 @@ struct PickerFormField<T: Codable>: View {
     
     @EnvironmentObject var viewModel: FormViewModel<T>
     
+    @State private var showPicker = false
+    @State private var pickerSelection: Int?
+    
     let pickerData: PickerData<T>
     
     var body: some View {
-        Picker(pickerData.placeholder,
-               selection: $viewModel.value[dynamicMember: pickerData.keypath]) {
-            ForEach(pickerData.choices, id: \.self) {
-                Text($0)
+        VStack {
+            TextField(pickerData.placeholder, text: $viewModel.value[dynamicMember: pickerData.keypath]) { editing in
+                showPicker = editing
+            }
+            if showPicker {
+                Picker(pickerData.placeholder,
+                       selection: $viewModel.value[dynamicMember: pickerData.keypath]) {
+                    ForEach(pickerData.choices, id: \.self) {
+                        Text($0)
+                    }
+                }
+                .pickerStyle(InlinePickerStyle())
             }
         }
-        .pickerStyle(InlinePickerStyle())
     }
 }
