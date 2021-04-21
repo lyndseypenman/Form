@@ -21,6 +21,12 @@
 		920FE27B263010C7009EDFD5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FE279263010C7009EDFD5 /* Profile.swift */; };
 		9236494826303A1D0037C96A /* PickerFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236494726303A1D0037C96A /* PickerFormField.swift */; };
 		9236494926303A1D0037C96A /* PickerFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236494726303A1D0037C96A /* PickerFormField.swift */; };
+		9236496826304A300037C96A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236496726304A300037C96A /* PrimaryButton.swift */; };
+		9236496926304A300037C96A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236496726304A300037C96A /* PrimaryButton.swift */; };
+		9236496D26305CF80037C96A /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236496C26305CF80037C96A /* Color+Custom.swift */; };
+		9236496E26305CF80037C96A /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236496C26305CF80037C96A /* Color+Custom.swift */; };
+		9236497226305D9E0037C96A /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236497126305D9E0037C96A /* Font+Custom.swift */; };
+		9236497326305D9E0037C96A /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236497126305D9E0037C96A /* Font+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,9 @@
 		920FE274262F2B67009EDFD5 /* TextInputFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputFormField.swift; sourceTree = "<group>"; };
 		920FE279263010C7009EDFD5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		9236494726303A1D0037C96A /* PickerFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerFormField.swift; sourceTree = "<group>"; };
+		9236496726304A300037C96A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		9236496C26305CF80037C96A /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
+		9236497126305D9E0037C96A /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,9 @@
 				9236494726303A1D0037C96A /* PickerFormField.swift */,
 				920FE279263010C7009EDFD5 /* Profile.swift */,
 				920FE274262F2B67009EDFD5 /* TextInputFormField.swift */,
+				9236496726304A300037C96A /* PrimaryButton.swift */,
+				9236496C26305CF80037C96A /* Color+Custom.swift */,
+				9236497126305D9E0037C96A /* Font+Custom.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -205,8 +217,11 @@
 			files = (
 				920FE275262F2B67009EDFD5 /* TextInputFormField.swift in Sources */,
 				920FE27A263010C7009EDFD5 /* Profile.swift in Sources */,
+				9236496D26305CF80037C96A /* Color+Custom.swift in Sources */,
 				9236494826303A1D0037C96A /* PickerFormField.swift in Sources */,
+				9236497226305D9E0037C96A /* Font+Custom.swift in Sources */,
 				920FE26C262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
+				9236496826304A300037C96A /* PrimaryButton.swift in Sources */,
 				920FE25D262F2AA3009EDFD5 /* ContentView.swift in Sources */,
 				920FE25B262F2AA3009EDFD5 /* FormApp.swift in Sources */,
 			);
@@ -218,8 +233,11 @@
 			files = (
 				920FE276262F2B67009EDFD5 /* TextInputFormField.swift in Sources */,
 				920FE27B263010C7009EDFD5 /* Profile.swift in Sources */,
+				9236496E26305CF80037C96A /* Color+Custom.swift in Sources */,
 				9236494926303A1D0037C96A /* PickerFormField.swift in Sources */,
+				9236497326305D9E0037C96A /* Font+Custom.swift in Sources */,
 				920FE26D262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
+				9236496926304A300037C96A /* PrimaryButton.swift in Sources */,
 				920FE25E262F2AA3009EDFD5 /* ContentView.swift in Sources */,
 				920FE25C262F2AA3009EDFD5 /* FormApp.swift in Sources */,
 			);

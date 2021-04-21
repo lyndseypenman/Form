@@ -24,10 +24,12 @@ struct PickerFormField<T: Codable>: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(viewModel.value[keyPath: pickerData.keypath])
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .onTapGesture {
                     showPicker.toggle()
                 }
                 .bodyLarge()
+                .overlay(VStack{Divider().offset(x: 0, y: 20)})
             if showPicker {
                 Picker(pickerData.placeholder,
                        selection: $viewModel.value[dynamicMember: pickerData.keypath]) {
