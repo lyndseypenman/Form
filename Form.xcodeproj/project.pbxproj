@@ -69,13 +69,13 @@
 		920FE247262F2AA3009EDFD5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				920FE248262F2AA3009EDFD5 /* FormApp.swift */,
-				920FE249262F2AA3009EDFD5 /* ContentView.swift */,
 				920FE24A262F2AA3009EDFD5 /* Assets.xcassets */,
+				920FE249262F2AA3009EDFD5 /* ContentView.swift */,
+				920FE248262F2AA3009EDFD5 /* FormApp.swift */,
 				920FE26B262F2AB7009EDFD5 /* FormViewModel.swift */,
-				920FE274262F2B67009EDFD5 /* TextInputFormField.swift */,
-				920FE279263010C7009EDFD5 /* Profile.swift */,
 				9236494726303A1D0037C96A /* PickerFormField.swift */,
+				920FE279263010C7009EDFD5 /* Profile.swift */,
+				920FE274262F2B67009EDFD5 /* TextInputFormField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";

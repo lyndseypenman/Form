@@ -18,7 +18,6 @@ struct PickerFormField<T: Codable>: View {
     @EnvironmentObject var viewModel: FormViewModel<T>
     
     @State private var showPicker = false
-    @State private var pickerSelection: Int?
     
     let pickerData: PickerData<T>
     
@@ -28,11 +27,13 @@ struct PickerFormField<T: Codable>: View {
                 .onTapGesture {
                     showPicker.toggle()
                 }
+                .bodyLarge()
             if showPicker {
                 Picker(pickerData.placeholder,
                        selection: $viewModel.value[dynamicMember: pickerData.keypath]) {
                     ForEach(pickerData.choices, id: \.self) {
                         Text($0)
+                            .bodyLarge()
                     }
                 }
                 .pickerStyle(InlinePickerStyle())
