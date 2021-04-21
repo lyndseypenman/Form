@@ -26,8 +26,7 @@ struct ContentView<T: Codable>: View {
             Button {
                 print("Saving data")
             } label: {
-                let save = "Save".localizedUppercase
-                Text(save)
+                Text(viewModel.buttonTitle.localizedUppercase)
                     .font(.button)
                     .kerning(2.5)
             }
@@ -37,5 +36,6 @@ struct ContentView<T: Codable>: View {
         }
         .padding(EdgeInsets(top: 30, leading: 26, bottom: 30, trailing: 26))
         .environmentObject(viewModel)
+        .background(Color.background.edgesIgnoringSafeArea(.all))
     }
 }

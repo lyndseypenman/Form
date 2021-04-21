@@ -22,6 +22,8 @@ class FormViewModel<T: Codable>: ObservableObject {
         }
     }
     
+    var buttonTitle: String
+    
     private let saveCondition: (T, T) -> Bool
     private let originalValue: T
     
@@ -31,6 +33,7 @@ class FormViewModel<T: Codable>: ObservableObject {
         self.value = value
         self.originalValue = value
         self.canSaveForm = saveCondition(value, originalValue)
+        self.buttonTitle = "Done"
     }
     
 }

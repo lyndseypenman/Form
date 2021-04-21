@@ -16,4 +16,5 @@ extension Color {
     static let textOnPrimary = Color("TextOnPrimary")
     static let textOnPrimaryDisabled = Color("TextOnPrimaryDisabled")
     static let textPrimary = Color("TextPrimary")
+    static let background = Color("Background")
 }
