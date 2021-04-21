@@ -23,10 +23,11 @@ struct PickerFormField<T: Codable>: View {
     let pickerData: PickerData<T>
     
     var body: some View {
-        VStack {
-            TextField(pickerData.placeholder, text: $viewModel.value[dynamicMember: pickerData.keypath]) { editing in
-                showPicker = editing
-            }
+        VStack(alignment: .leading) {
+            Text(viewModel.value[keyPath: pickerData.keypath])
+                .onTapGesture {
+                    showPicker.toggle()
+                }
             if showPicker {
                 Picker(pickerData.placeholder,
                        selection: $viewModel.value[dynamicMember: pickerData.keypath]) {
