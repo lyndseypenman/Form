@@ -12,6 +12,7 @@ struct TextInputData<T: Codable> {
     let keyboardType: UIKeyboardType?
     let contentType: UITextContentType?
     let placeholder: String
+    let maxCharacters: Int?
 }
 
 struct TextInputFormField<T: Codable>: View {
@@ -21,12 +22,30 @@ struct TextInputFormField<T: Codable>: View {
     let textInputData: TextInputData<T>
     
     var body: some View {
-        TextField(textInputData.placeholder,
-                  text: $viewModel.value[dynamicMember: textInputData.keypath])
-            .overlay(VStack{Divider().offset(x: 0, y: 20)})
-            .textFieldStyle(CustomTextFieldStyle(
-                                keyboardType: textInputData.keyboardType,
-                                content: textInputData.contentType))
+        VStack {
+            TextField(textInputData.placeholder,
+                      text: $viewModel.value[dynamicMember: textInputData.keypath])
+                .textFieldStyle(CustomTextFieldStyle(
+                                    keyboardType: textInputData.keyboardType,
+                                    content: textInputData.contentType))
+            if let maxCharacters = textInputData.maxCharacters {
+                let characterCount = viewModel.value[keyPath: textInputData.keypath].count
+                let valid = characterCount <= maxCharacters
+                VStack(alignment: .trailing, spacing: 3) {
+                    Divider()
+                        .frame(minHeight: 1)
+                        .background(valid ? Color.divider : Color.alertError)
+                    Text("\(characterCount)/\(maxCharacters)")
+                        .foregroundColor(valid ? Color.divider : Color.alertError)
+                        .font(.captionCustom)
+                        .kerning(0)
+                }
+            } else {
+                Divider()
+                    .frame(minHeight: 1)
+                    .background(Color.divider)
+            }
+        }
     }
 }
 

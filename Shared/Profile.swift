@@ -12,11 +12,3 @@ struct Profile: Codable, Equatable {
     var lastName: String
     var age: String
 }
-
-struct Address: Codable, Equatable {
-    var lineOne: String
-    var lineTwo: String
-    var city: String
-    var postCode: String
-    var country: String
-}

@@ -11,4 +11,8 @@ extension Font {
     static var button: Font {
         .custom("Avenir-Heavy", size: 14, relativeTo: .callout)
     }
+    
+    static var captionCustom: Font {
+        .custom("Avenir-Book", size: 12, relativeTo: .caption)
+    }
 }
