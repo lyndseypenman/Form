@@ -9,7 +9,7 @@ import SwiftUI
 
 enum FormField<T: Codable> {
     case textInput(TextInputData<T>)
-    case picker(WritableKeyPath<T, String>)
+    case picker(PickerData<T>)
 }
 
 class FormViewModel<T: Codable>: ObservableObject {

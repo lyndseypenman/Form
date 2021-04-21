@@ -19,6 +19,8 @@
 		920FE276262F2B67009EDFD5 /* TextInputFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FE274262F2B67009EDFD5 /* TextInputFormField.swift */; };
 		920FE27A263010C7009EDFD5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FE279263010C7009EDFD5 /* Profile.swift */; };
 		920FE27B263010C7009EDFD5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FE279263010C7009EDFD5 /* Profile.swift */; };
+		9236494826303A1D0037C96A /* PickerFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236494726303A1D0037C96A /* PickerFormField.swift */; };
+		9236494926303A1D0037C96A /* PickerFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236494726303A1D0037C96A /* PickerFormField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		920FE26B262F2AB7009EDFD5 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		920FE274262F2B67009EDFD5 /* TextInputFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputFormField.swift; sourceTree = "<group>"; };
 		920FE279263010C7009EDFD5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		9236494726303A1D0037C96A /* PickerFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerFormField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 				920FE26B262F2AB7009EDFD5 /* FormViewModel.swift */,
 				920FE274262F2B67009EDFD5 /* TextInputFormField.swift */,
 				920FE279263010C7009EDFD5 /* Profile.swift */,
+				9236494726303A1D0037C96A /* PickerFormField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -201,6 +205,7 @@
 			files = (
 				920FE275262F2B67009EDFD5 /* TextInputFormField.swift in Sources */,
 				920FE27A263010C7009EDFD5 /* Profile.swift in Sources */,
+				9236494826303A1D0037C96A /* PickerFormField.swift in Sources */,
 				920FE26C262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
 				920FE25D262F2AA3009EDFD5 /* ContentView.swift in Sources */,
 				920FE25B262F2AA3009EDFD5 /* FormApp.swift in Sources */,
@@ -213,6 +218,7 @@
 			files = (
 				920FE276262F2B67009EDFD5 /* TextInputFormField.swift in Sources */,
 				920FE27B263010C7009EDFD5 /* Profile.swift in Sources */,
+				9236494926303A1D0037C96A /* PickerFormField.swift in Sources */,
 				920FE26D262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
 				920FE25E262F2AA3009EDFD5 /* ContentView.swift in Sources */,
 				920FE25C262F2AA3009EDFD5 /* FormApp.swift in Sources */,

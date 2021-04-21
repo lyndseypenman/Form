@@ -17,8 +17,8 @@ struct ContentView<T: Codable>: View {
                 switch viewModel.formFields[$0] {
                 case .textInput(let data):
                     TextInputFormField(textInputData: data)
-                default:
-                    Text("Hi")
+                case .picker(let data):
+                    PickerFormField(pickerData: data)
                 }
             }
         }

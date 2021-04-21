@@ -24,9 +24,9 @@ struct FormApp: App {
             let lineTwo = FormField.textInput(TextInputData(keypath: \Address.lineTwo, keyboardType: .default, contentType: .streetAddressLine2, placeholder: "Line two"))
             let city = FormField.textInput(TextInputData(keypath: \Address.city, keyboardType: .default, contentType: .addressCity, placeholder: "City"))
             let postCode = FormField.textInput(TextInputData(keypath: \Address.postCode, keyboardType: .default, contentType: .postalCode, placeholder: "Postcode"))
-            let country = FormField.textInput(TextInputData(keypath: \Address.country, keyboardType: .default, contentType: .countryName, placeholder: "Country"))
+            let country = FormField.picker(PickerData(choices: ["UK", "USA", "Austria", "Germany"], placeholder: "Country (select)", keypath: \Address.country))
             
-            let address = Address(lineOne: "70/5 Arden Street", lineTwo: "", city: "Edinburgh", postCode: "EH9 1BN", country: "Scotland")
+            let address = Address(lineOne: "70/5 Arden Street", lineTwo: "", city: "Edinburgh", postCode: "EH9 1BN", country: "Austria")
             
             ContentView(viewModel: FormViewModel(value: address, formFields: [lineOne, lineTwo, city, postCode, country], saveCondition: { address, originalAddress -> Bool in
                 if address != originalAddress {
