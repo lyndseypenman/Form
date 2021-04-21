@@ -29,6 +29,8 @@
 		9236497326305D9E0037C96A /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236497126305D9E0037C96A /* Font+Custom.swift */; };
 		92364978263069B00037C96A /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92364977263069B00037C96A /* Address.swift */; };
 		92364979263069B00037C96A /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92364977263069B00037C96A /* Address.swift */; };
+		926A776F26307A5900F356D2 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A776E26307A5900F356D2 /* StyledTextField.swift */; };
+		926A777026307A5900F356D2 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A776E26307A5900F356D2 /* StyledTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,7 @@
 		9236496C26305CF80037C96A /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		9236497126305D9E0037C96A /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
 		92364977263069B00037C96A /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		926A776E26307A5900F356D2 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 				9236496726304A300037C96A /* PrimaryButton.swift */,
 				920FE279263010C7009EDFD5 /* Profile.swift */,
 				920FE274262F2B67009EDFD5 /* TextInputFormField.swift */,
+				926A776E26307A5900F356D2 /* StyledTextField.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -223,6 +227,7 @@
 				920FE27A263010C7009EDFD5 /* Profile.swift in Sources */,
 				9236496D26305CF80037C96A /* Color+Custom.swift in Sources */,
 				9236494826303A1D0037C96A /* PickerFormField.swift in Sources */,
+				926A776F26307A5900F356D2 /* StyledTextField.swift in Sources */,
 				92364978263069B00037C96A /* Address.swift in Sources */,
 				9236497226305D9E0037C96A /* Font+Custom.swift in Sources */,
 				920FE26C262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
@@ -240,6 +245,7 @@
 				920FE27B263010C7009EDFD5 /* Profile.swift in Sources */,
 				9236496E26305CF80037C96A /* Color+Custom.swift in Sources */,
 				9236494926303A1D0037C96A /* PickerFormField.swift in Sources */,
+				926A777026307A5900F356D2 /* StyledTextField.swift in Sources */,
 				92364979263069B00037C96A /* Address.swift in Sources */,
 				9236497326305D9E0037C96A /* Font+Custom.swift in Sources */,
 				920FE26D262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
