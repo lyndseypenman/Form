@@ -10,6 +10,8 @@ import SwiftUI
 enum FormField<T: Codable> {
     case textInput(TextInputData<T>)
     case picker(PickerData<T>)
+    case text(String)
+    case link(LinkFormFieldData)
 }
 
 class FormViewModel<T: Codable>: ObservableObject {
