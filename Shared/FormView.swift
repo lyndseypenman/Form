@@ -27,6 +27,8 @@ struct FormView<T: Codable>: View {
                             .font(.bodyNormal)
                             .kerning(0)
                             .foregroundColor(Color.textPrimary)
+                    case .validation(let data):
+                        ValidationFormField(conditionMet: data.conditionMet, text: data.text)
                     }
                 }
             }

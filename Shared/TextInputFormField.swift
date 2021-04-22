@@ -11,6 +11,7 @@ struct TextInputData<T: Codable> {
     var keypath: WritableKeyPath<T, String>
     let keyboardType: UIKeyboardType?
     let contentType: UITextContentType?
+    let autocorrectType: UITextAutocorrectionType?
     let placeholder: String
     let maxCharacters: Int?
 }
@@ -27,7 +28,8 @@ struct TextInputFormField<T: Codable>: View {
                       text: $viewModel.value[dynamicMember: textInputData.keypath])
                 .textFieldStyle(StyledTextField(
                                     keyboardType: textInputData.keyboardType,
-                                    content: textInputData.contentType))
+                                    content: textInputData.contentType,
+                                    autocorrectionType: textInputData.autocorrectType))
             if let maxCharacters = textInputData.maxCharacters {
                 let characterCount = viewModel.value[keyPath: textInputData.keypath].count
                 let valid = characterCount <= maxCharacters

@@ -11,12 +11,14 @@ struct StyledTextField: TextFieldStyle {
     
     let keyboardType: UIKeyboardType?
     let content: UITextContentType?
+    let autocorrectionType: UITextAutocorrectionType?
     
     func _body(configuration: TextField<_Label>) -> some View {
         configuration
             .bodyLarge()
             .keyboardType(keyboardType ?? .default)
             .textContentType(content ?? .none)
+            .disableAutocorrection(autocorrectionType == .none)
     }
 }
 

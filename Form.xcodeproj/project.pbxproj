@@ -37,6 +37,12 @@
 		926A777A263080B300F356D2 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A7778263080B300F356D2 /* FormView.swift */; };
 		926A77802630824000F356D2 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A777F2630824000F356D2 /* ChangePassword.swift */; };
 		926A77812630824000F356D2 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A777F2630824000F356D2 /* ChangePassword.swift */; };
+		926A77852631616B00F356D2 /* ValidationFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A77842631616B00F356D2 /* ValidationFormField.swift */; };
+		926A77862631616B00F356D2 /* ValidationFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A77842631616B00F356D2 /* ValidationFormField.swift */; };
+		926A7790263167AE00F356D2 /* NSRegularExpression+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A778F263167AE00F356D2 /* NSRegularExpression+Convenience.swift */; };
+		926A7791263167AE00F356D2 /* NSRegularExpression+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A778F263167AE00F356D2 /* NSRegularExpression+Convenience.swift */; };
+		926A7795263167C600F356D2 /* NSRegularExpression+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A7794263167C600F356D2 /* NSRegularExpression+Matches.swift */; };
+		926A7796263167C600F356D2 /* NSRegularExpression+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926A7794263167C600F356D2 /* NSRegularExpression+Matches.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,9 @@
 		926A777326307B5900F356D2 /* LinkFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkFormField.swift; sourceTree = "<group>"; };
 		926A7778263080B300F356D2 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		926A777F2630824000F356D2 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		926A77842631616B00F356D2 /* ValidationFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationFormField.swift; sourceTree = "<group>"; };
+		926A778F263167AE00F356D2 /* NSRegularExpression+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Convenience.swift"; sourceTree = "<group>"; };
+		926A7794263167C600F356D2 /* NSRegularExpression+Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Matches.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +104,7 @@
 			children = (
 				92364977263069B00037C96A /* Address.swift */,
 				920FE24A262F2AA3009EDFD5 /* Assets.xcassets */,
+				926A777F2630824000F356D2 /* ChangePassword.swift */,
 				9236496C26305CF80037C96A /* Color+Custom.swift */,
 				920FE249262F2AA3009EDFD5 /* ContentView.swift */,
 				9236497126305D9E0037C96A /* Font+Custom.swift */,
@@ -107,7 +117,9 @@
 				920FE279263010C7009EDFD5 /* Profile.swift */,
 				926A776E26307A5900F356D2 /* StyledTextField.swift */,
 				920FE274262F2B67009EDFD5 /* TextInputFormField.swift */,
-				926A777F2630824000F356D2 /* ChangePassword.swift */,
+				926A77842631616B00F356D2 /* ValidationFormField.swift */,
+				926A778F263167AE00F356D2 /* NSRegularExpression+Convenience.swift */,
+				926A7794263167C600F356D2 /* NSRegularExpression+Matches.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -238,6 +250,7 @@
 				926A7779263080B300F356D2 /* FormView.swift in Sources */,
 				920FE275262F2B67009EDFD5 /* TextInputFormField.swift in Sources */,
 				920FE27A263010C7009EDFD5 /* Profile.swift in Sources */,
+				926A77852631616B00F356D2 /* ValidationFormField.swift in Sources */,
 				9236496D26305CF80037C96A /* Color+Custom.swift in Sources */,
 				9236494826303A1D0037C96A /* PickerFormField.swift in Sources */,
 				926A777426307B5900F356D2 /* LinkFormField.swift in Sources */,
@@ -245,8 +258,10 @@
 				926A776F26307A5900F356D2 /* StyledTextField.swift in Sources */,
 				92364978263069B00037C96A /* Address.swift in Sources */,
 				9236497226305D9E0037C96A /* Font+Custom.swift in Sources */,
+				926A7790263167AE00F356D2 /* NSRegularExpression+Convenience.swift in Sources */,
 				920FE26C262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
 				9236496826304A300037C96A /* PrimaryButton.swift in Sources */,
+				926A7795263167C600F356D2 /* NSRegularExpression+Matches.swift in Sources */,
 				920FE25D262F2AA3009EDFD5 /* ContentView.swift in Sources */,
 				920FE25B262F2AA3009EDFD5 /* FormApp.swift in Sources */,
 			);
@@ -259,6 +274,7 @@
 				926A777A263080B300F356D2 /* FormView.swift in Sources */,
 				920FE276262F2B67009EDFD5 /* TextInputFormField.swift in Sources */,
 				920FE27B263010C7009EDFD5 /* Profile.swift in Sources */,
+				926A77862631616B00F356D2 /* ValidationFormField.swift in Sources */,
 				9236496E26305CF80037C96A /* Color+Custom.swift in Sources */,
 				9236494926303A1D0037C96A /* PickerFormField.swift in Sources */,
 				926A777526307B5900F356D2 /* LinkFormField.swift in Sources */,
@@ -266,8 +282,10 @@
 				926A777026307A5900F356D2 /* StyledTextField.swift in Sources */,
 				92364979263069B00037C96A /* Address.swift in Sources */,
 				9236497326305D9E0037C96A /* Font+Custom.swift in Sources */,
+				926A7791263167AE00F356D2 /* NSRegularExpression+Convenience.swift in Sources */,
 				920FE26D262F2AB7009EDFD5 /* FormViewModel.swift in Sources */,
 				9236496926304A300037C96A /* PrimaryButton.swift in Sources */,
+				926A7796263167C600F356D2 /* NSRegularExpression+Matches.swift in Sources */,
 				920FE25E262F2AA3009EDFD5 /* ContentView.swift in Sources */,
 				920FE25C262F2AA3009EDFD5 /* FormApp.swift in Sources */,
 			);
