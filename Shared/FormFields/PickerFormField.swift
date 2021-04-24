@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct PickerData<T: Codable> {
+public struct PickerData<T: Equatable> {
     let choices: [String]
     let placeholder: String
     let keypath: WritableKeyPath<T, String>
 }
 
-struct PickerFormField<T: Codable>: View {
+struct PickerFormField<T: Equatable>: View {
     
     @EnvironmentObject var viewModel: FormViewModel<T>
     

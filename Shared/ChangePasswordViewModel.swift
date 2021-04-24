@@ -11,26 +11,32 @@ class ChangePasswordViewModel: FormViewModel<ChangePassword> {
     
     override var value: ChangePassword {
         didSet {
-            canSaveForm = saveCondition(value, originalValue)
+            canSubmit = saveCondition(currentValue: value, originalValue: originalValue)
             self.formFields = refreshFields(for: value)
         }
     }
     
     init() {
         let changePassword = ChangePassword(originalPassword: "", newPassword: "", confirmedPassword: "")
-        super.init(value: changePassword, formFields: []) { passwords, _ -> Bool in
-            let allContainValue = [passwords.originalPassword,
-                                   passwords.newPassword,
-                                   passwords.confirmedPassword]
-                .allSatisfy { !$0.isEmpty }
-            let passwordRegex = "\\A(?=.{8,}\\z)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z])(?=\\D*\\d).*"
-            let regex = NSRegularExpression(passwordRegex)
-            let newPasswordValid = regex.matches(passwords.newPassword)
-            let matchingPasswords = passwords.newPassword == passwords.confirmedPassword
-            return allContainValue && newPasswordValid && matchingPasswords
-        }
+        super.init(value: changePassword, formFields: [])
         self.value = changePassword
         self.buttonTitle = "Next"
+    }
+    
+    override func saveCondition(currentValue: ChangePassword, originalValue: ChangePassword) -> Bool {
+        let allContainValue = [currentValue.originalPassword,
+                               currentValue.newPassword,
+                               currentValue.confirmedPassword]
+            .allSatisfy { !$0.isEmpty }
+        let passwordRegex = "\\A(?=.{8,}\\z)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z])(?=\\D*\\d).*"
+        let regex = NSRegularExpression(passwordRegex)
+        let newPasswordValid = regex.matches(currentValue.newPassword)
+        let matchingPasswords = currentValue.newPassword == currentValue.confirmedPassword
+        return allContainValue && newPasswordValid && matchingPasswords
+    }
+    
+    override func save() {
+        print("saving passwords")
     }
     
     private func refreshFields(for updated: ChangePassword) -> [FormField<ChangePassword>] {

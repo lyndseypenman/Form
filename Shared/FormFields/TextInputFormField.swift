@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextInputData<T: Codable> {
+public struct TextInputData<T: Equatable> {
     var keypath: WritableKeyPath<T, String>
     let keyboardType: UIKeyboardType?
     let contentType: UITextContentType?
@@ -16,7 +16,7 @@ struct TextInputData<T: Codable> {
     let maxCharacters: Int?
 }
 
-struct TextInputFormField<T: Codable>: View {
+struct TextInputFormField<T: Equatable>: View {
     
     @EnvironmentObject var viewModel: FormViewModel<T>
     

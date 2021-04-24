@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LinkFormFieldData {
+public struct LinkFormFieldData {
     let text: String
     let content: String
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView<T: Codable>: View {
+struct ContentView<T: Equatable>: View {
     
     var viewModel: FormViewModel<T>
     

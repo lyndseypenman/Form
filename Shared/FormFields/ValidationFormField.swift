@@ -7,16 +7,20 @@
 
 import SwiftUI
 
+public struct ValidationFormData {
+    let conditionMet: Bool
+    let text: String
+}
+
 struct ValidationFormField: View {
     
-    var conditionMet: Bool
-    var text: String
+    let validationData: ValidationFormData
     
     var body: some View {
         HStack(spacing: 15) {
-            Image(conditionMet ? "ticked" : "crossed")
+            Image(validationData.conditionMet ? "ticked" : "crossed")
                 .foregroundColor(Color.textPrimary)
-            Text(text)
+            Text(validationData.text)
                 .font(.bodyNormal)
                 .kerning(0)
         }

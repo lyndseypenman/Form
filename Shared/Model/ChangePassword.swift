@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChangePassword: Codable {
+struct ChangePassword: Equatable {
     var originalPassword: String
     var newPassword: String
     var confirmedPassword: String

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum FormField<T: Codable> {
+public enum FormField<T: Equatable> {
     case textInput(TextInputData<T>)
     case picker(PickerData<T>)
     case text(String)
@@ -15,33 +15,33 @@ enum FormField<T: Codable> {
     case validation(ValidationFormData)
 }
 
-struct ValidationFormData {
-    let conditionMet: Bool
-    let text: String
-}
-
-class FormViewModel<T: Codable>: ObservableObject {
+open class FormViewModel<T: Equatable>: ObservableObject {
     
-    @Published var canSaveForm = false
+    @Published var canSubmit = false
     @Published var formFields: [FormField<T>]
     @Published var value: T {
         didSet {
-            canSaveForm = saveCondition(value, originalValue)
+            canSubmit = saveCondition(currentValue: value, originalValue: originalValue)
         }
     }
     
     var buttonTitle: String
-    var saveCondition: (T, T) -> Bool
-    
     let originalValue: T
     
-    init(value: T, formFields: [FormField<T>], saveCondition: @escaping (T, T) -> Bool) {
+    public init(value: T, formFields: [FormField<T>]) {
         self.formFields = formFields
-        self.saveCondition = saveCondition
         self.value = value
         self.originalValue = value
-        self.canSaveForm = saveCondition(value, originalValue)
         self.buttonTitle = "Done"
+        self.canSubmit = saveCondition(currentValue: value, originalValue: originalValue)
+    }
+    
+    open func saveCondition(currentValue: T, originalValue: T) -> Bool {
+        return currentValue != originalValue
+    }
+    
+    open func save() {
+        fatalError("Must be overridden by subclass")
     }
     
 }

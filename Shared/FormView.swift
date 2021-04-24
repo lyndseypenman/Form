@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FormView<T: Codable>: View {
+struct FormView<T: Equatable>: View {
     
     @ObservedObject var viewModel: FormViewModel<T>
     
@@ -28,19 +28,19 @@ struct FormView<T: Codable>: View {
                             .kerning(0)
                             .foregroundColor(Color.textPrimary)
                     case .validation(let data):
-                        ValidationFormField(conditionMet: data.conditionMet, text: data.text)
+                        ValidationFormField(validationData: data)
                     }
                 }
             }
             Button {
-                print("Saving data")
+                viewModel.save()
             } label: {
                 Text(viewModel.buttonTitle.localizedUppercase)
                     .font(.button)
                     .kerning(2.5)
             }
-            .buttonStyle(PrimaryButton(isEnabled: viewModel.canSaveForm))
-            .disabled(!viewModel.canSaveForm)
+            .buttonStyle(PrimaryButton(isEnabled: viewModel.canSubmit))
+            .disabled(!viewModel.canSubmit)
             Spacer()
         }
         .padding(EdgeInsets(top: 30, leading: 26, bottom: 30, trailing: 26))
